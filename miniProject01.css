@@ -1,0 +1,40 @@
+body {
+    font-family: "Sarabun", "Noto Sans Thai", Arial, sans-serif; /* ฟอนต์สำหรับทั้งหน้าเว็บ แสดงตามลำดับถ้ามีฟอนต์นั้นๆ */
+    display: flex; /* เปลี่ยน body ให้เป็น flex container*/
+    justify-content: center; /* จัดแนวนอนให้ลูก เช่นในโปรเจคนี้มี .card อยู่ตรงกลาง*/
+    align-items: center; /* จัดแนวตั้งให้ลูกอยู่ตรงกลาง */
+    height: 100vh; /* ความสูงเต็มจอ vh ย่อมาจาก viewport height */
+    height: 100dvh; /*ความสูง viewport ที่มองเห็นจริงแบบ dynamic */
+    background: linear-gradient(to right, #74ebd5, #ACB6E5); /* พื้นหลังไล่สี */
+}
+
+.card {
+    background: white; /* กล่องสีขาว */
+    padding: 40px; /* เว้นระยะขอบด้านในจาก content 40px */
+    border-radius: 20px; /* ขอบมน / มุมโค้งมน 20px */
+    text-align: center; /* จัดข้อความและเนื้อหาภายในให้อยู่กึ่งกลาง */
+    box-shadow: 0 10px 20px rgb(0, 0, 0, 0.2); /* เงาเบลอๆ ใส่เพราะอยากให้กล่องลอยออกมาจากพื้นหลัง */
+}
+
+.title {
+    font-size: 28px; /* ขนาดตัวหนังสือ */
+    margin-bottom: 20px; /* เว้นช่องว่างข้างล่าง ถ้าไม่ใส่ข้อความมันจะติดกับเนื้อหาถัดไป */
+    color: rgb(2, 55, 66); /*ใส่สีข้อความ */
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2); /*เพิ่มเงาให้ตัวหนังสือ เพราะอยากให้ดูมีมิติ */
+}
+
+.btn {
+    font-family: inherit; /* สืบทอดฟอนต์เดียวกับ body */
+    padding: 10px 20px; /* เพิ่มพื้นที่รอบข้อความ ทำให้ปุ่มใหญ่ขึ้น มีระยะห่างขอบปุ่มกับข้อความ */
+    border: none; /*ปุ่มไม่มีเส้นขอบที่กรอบ*/
+    border-radius: 10px; /* มุมปุ่มโค้งมน */
+    background: #b630e6; /*ใส่สีพื้นหลังปุ่ม */
+    color: white; /*สีตัวหนังสือ */
+    cursor: pointer; /* ถ้าเอาเม้าไปวางจะเป็นรูปมือ */
+    transition: 0.3s; /* ตอน hover มีการเปลี่ยนแบบนุ่มนวล */
+}
+
+.btn:hover {
+    background: #9200b3; /* ถ้าเอาเม้าไปวางที่ปุ่ม สีพื้นหลังปุ่มจะเปลี่ยน */
+    transform: scale(1.1); /* ปุ่มขยาย 110% คือ ถ้าเอาเม้าไปวางที่ปุ่มมันจะเด้งเล็กน้อย */
+}
